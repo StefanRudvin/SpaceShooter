@@ -10,7 +10,7 @@ public class DestroyByContact : MonoBehaviour {
 
 	void Start () {
 		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
-		if (gameControllerObject != null) {
+		if (gameControllerObject != null) { 
 			gameController = gameControllerObject.GetComponent <GameController>();
 		}
 		if (gameController == null) {
@@ -20,19 +20,20 @@ public class DestroyByContact : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 
-		if (other.tag == "Boundary") {
+//		if (other.tag == "Boundary" || other.tag == "Enemy") {
+		if (other.CompareTag ("Boundary") || other.CompareTag ("Enemy")) {
 			return;
 		}
-
-		Instantiate (explosion, transform.position, transform.rotation);
+		if (explosion != null) {
+			Instantiate (explosion, transform.position, transform.rotation);
+		}
 
 		if (other.tag == "Player") {
 			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
 			gameController.GameOver();
 		}
 
-
-		//gameController.AddScore (scoreValue);
+		gameController.AddScore (scoreValue);
 		Destroy(other.gameObject);
 		Destroy(gameObject);
 

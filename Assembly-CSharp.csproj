@@ -48,13 +48,14 @@
      <Compile Include="Assets\TutorialInfo\Scripts\TutorialInfo.cs" />
      <Compile Include="Assets\scripts\DestroyByContact.cs" />
      <Compile Include="Assets\scripts\DestroyByTime.cs" />
+     <Compile Include="Assets\scripts\EvasiveManeuver.cs" />
      <Compile Include="Assets\scripts\GameController.cs" />
      <Compile Include="Assets\scripts\Mover.cs" />
      <Compile Include="Assets\scripts\PlayerController.cs" />
      <Compile Include="Assets\scripts\RandomRotator.cs" />
+     <Compile Include="Assets\scripts\WeaponController.cs" />
      <Compile Include="Assets\scripts\bgScroller.cs" />
      <Compile Include="Assets\scripts\destroyByBoundary.cs" />
-     <Compile Include="Assets\scripts\weaponController.cs" />
      <None Include="Assets\TutorialInfo\Fonts\LICENSE.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
